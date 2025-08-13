@@ -1,43 +1,25 @@
-# Astro Starter Kit: Minimal
+[contributing]: CONTRIBUTING.md
+[code_of_conduct]: CODE_OF_CONDUCT.md
+[license]: LICENSE.txt
 
-```sh
-npm create astro@latest -- --template minimal
-```
+# Kunai
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+CoderDojo Braga's static landing page.
 
-## 🚀 Project Structure
+## 🤝 Contributing
 
-Inside of your Astro project, you'll see the following folders and files:
+When contributing to this repository, please first discuss the change you wish
+to make via discussions, issues, email, or any other method with the owners of this
+repository before making a change.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Note we have a [Code of Conduct](CODE_OF_CONDUCT.md), please follow it
+in all your interactions with the project.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+We have a [Contributing Guide][contributing] to help you getting started.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 📝 License
 
-Any static assets, like images, can be placed in the `public/` directory.
+Copyright (c) 2025, CoderDojo Braga.
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project is licensed under the GPLv3 License - see the [LICENSE][license]
+file for details.
