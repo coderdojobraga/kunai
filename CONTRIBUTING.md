@@ -5,7 +5,7 @@ local machine for development and testing purposes.
 
 ## 📥 Prerequisites
 
-- [Asdf(optional but highly recommended)](https://asdf-vm.com/)
+- [asdf](https://asdf-vm.com/) (optional but highly recommended)
 - [Node](https://nodejs.org/en/download/)
 
 ## 🔨 Development
