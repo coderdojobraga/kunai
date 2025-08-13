@@ -1,5 +1,3 @@
-<!-- To add a badge -->
-<!-- [name]: url||link-to.file  -->
 
 [contributing]: CONTRIBUTING.md
 [code_of_conduct]: CODE_OF_CONDUCT.md
