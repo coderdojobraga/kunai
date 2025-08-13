@@ -1,4 +1,3 @@
-
 [contributing]: CONTRIBUTING.md
 [code_of_conduct]: CODE_OF_CONDUCT.md
 [license]: LICENSE.txt
@@ -22,5 +21,5 @@ We have a [Contributing Guide][contributing] to help you getting started.
 
 Copyright (c) 2025, CoderDojo Braga.
 
-This project is licensed under the ??? License - see the [LICENSE][license]
+This project is licensed under the GPLv3 License - see the [LICENSE][license]
 file for details.

@@ -8,7 +8,7 @@ const config = {
     jsxSingleQuote: false,
     semi: true,
     trailingComma: "all",
-    tabWidth: 8, // open to discussion x)
+    tabWidth: 4,
     plugins: ["prettier-plugin-astro"],
     overrides: [
         {

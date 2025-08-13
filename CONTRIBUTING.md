@@ -5,10 +5,18 @@ local machine for development and testing purposes.
 
 ## 📥 Prerequisites
 
-- [asdf](https://asdf-vm.com/) (optional but highly recommended)
-- [Node](https://nodejs.org/en/download/)
+- [asdf](https://asdf-vm.com/) (recommended for version management)
 
-## 🔨 Development
+## 🔨 Installing
+
+Use asdf to install the required Node.js version:
+
+```bash
+# Install the Node.js version specified in .tool-versions
+asdf install
+```
+
+## 🔧 Development
 
 All commands are run from the root of the project, from a terminal:
 
