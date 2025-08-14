@@ -1,10 +1,10 @@
 [contributing]: CONTRIBUTING.md
 [code_of_conduct]: CODE_OF_CONDUCT.md
-[license]: LICENSE.txt
+[license]: LICENSE
 
 # Kunai
 
-CoderDojo Braga's static landing page.
+> 🤺 Landing page for CoderDojo Braga
 
 ## 🤝 Contributing
 
