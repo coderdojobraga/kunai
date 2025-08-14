@@ -6,6 +6,10 @@
 
 > 🤺 Landing page for CoderDojo Braga
 
+## 📖 Considerations
+
+This project is a work in progress that is being heavily inspired by our older project [shuriken](https://github.com/coderdojobraga/shuriken), specifically the `web` project. It is being developed in Astro with some bits of Vue.js.
+
 ## 🤝 Contributing
 
 When contributing to this repository, please first discuss the change you wish
