@@ -1,0 +1,69 @@
+---
+import Image from "astro/components/Image.astro";
+import Button from "astro-app/src/components/Button.astro";
+import logoLetteringDark from "../assets/logo-lettering-dark.svg";
+import smallLogo from "../assets/small-logo.svg";
+
+const pages = {
+    Home: "/",
+    Events: "/events",
+    Recruitment: "/recruitment",
+    FAQs: "/faq",
+};
+---
+
+<header class="container mx-auto">
+    <nav
+        class="mx-2 flex flex-row items-center justify-between pb-3 pt-7 lg:mx-12 xl:mx-20"
+    >
+        <div class="cursor-pointer py-2">
+            <Image
+                class="block max-md:hidden"
+                layout="fixed"
+                width={208}
+                height={65}
+                src={logoLetteringDark}
+                alt="CoderDojo Braga Logo"
+            />
+            <Image
+                class="hidden max-md:block"
+                layout="fixed"
+                width={65}
+                height={65}
+                src={smallLogo}
+                alt="CoderDojo Small"
+            />
+        </div>
+
+        <ul class="hidden md:flex gap-8 text-sm uppercase items-center">
+            <li>
+                <a
+                    target="_blank"
+                    href="https://coderdojobraga.notion.site/"
+                    class="hover:text-purple-500 cursor-pointer hover:transition-discrete duration-100"
+                    >Currículo</a
+                >
+            </li>
+
+            {
+                Object.entries(pages).map(([name, route]) => (
+                    <li>
+                        <a
+                            href={route}
+                            class="hover:text-purple-500 cursor-pointer hover:transition-discrete duration-100"
+                        >
+                            {name}
+                        </a>
+                    </li>
+                ))
+            }
+
+            <li>
+                <Button
+                    class="bg-purple rounded-2xl cursor-pointer hover:bg-purple-500 hover:transition-discrete duration-200"
+                    >Login</Button
+                >
+            </li>
+        </ul>
+    </nav>
+</header>
