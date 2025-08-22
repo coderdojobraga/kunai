@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import favicon from "../assets/favicon.ico";
+import Header from "../components/Header.astro";
 ---
 
 <!doctype html>
@@ -14,7 +15,7 @@ import favicon from "../assets/favicon.ico";
         <title>CoderDojo Braga</title>
     </head>
     <body>
-        <!-- Header -->
+        <Header />
         <slot />
         <Footer />
     </body>
