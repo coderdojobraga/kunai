@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Calendar, Home, Inbox, Search, Settings, HeartHandshake, ShieldQuestionMark, Book, Users, LogIn} from "lucide-vue-next"
-import heart_handshake from "lucide-vue-next"
 import {
   Sidebar,
   SidebarContent,

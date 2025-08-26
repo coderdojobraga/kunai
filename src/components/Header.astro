@@ -3,6 +3,7 @@ import Image from "astro/components/Image.astro";
 import { Button } from "./ui/button";
 import logoLetteringDark from "../assets/logo-lettering-dark.svg";
 import smallLogo from "../assets/small-logo.svg";
+import AppSidebar from "./AppSidebar.vue";
 
 const pages = {
     Home: "/",
@@ -63,6 +64,9 @@ const pages = {
                     class="bg-purple rounded-2xl cursor-pointer hover:bg-purple-500 hover:transition-discrete duration-200"
                     >Login</Button
                 >
+            </li>
+            <li>
+                <AppSidebar client:load />
             </li>
         </ul>
     </nav>
