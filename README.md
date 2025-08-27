@@ -1,10 +1,14 @@
 [contributing]: CONTRIBUTING.md
 [code_of_conduct]: CODE_OF_CONDUCT.md
-[license]: LICENSE.txt
+[license]: LICENSE
 
 # Kunai
 
-CoderDojo Braga's static landing page.
+> 🤺 Landing page for CoderDojo Braga
+
+## 📖 Considerations
+
+This project is a work in progress that is being heavily inspired by our older project [shuriken](https://github.com/coderdojobraga/shuriken), specifically the `web` project. It is being developed in Astro with some bits of Vue.js.
 
 ## 🤝 Contributing
 
