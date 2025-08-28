@@ -19,24 +19,15 @@ const pages = {
     >
         <div class="cursor-pointer py-2">
             <Image
-                class="block max-md:hidden"
                 layout="fixed"
                 width={208}
                 height={65}
                 src={logoLetteringDark}
                 alt="CoderDojo Braga Logo"
             />
-            <Image
-                class="hidden max-md:block"
-                layout="fixed"
-                width={65}
-                height={65}
-                src={smallLogo}
-                alt="CoderDojo Small"
-            />
         </div>
 
-        <ul class="hidden md:flex gap-8 text-sm uppercase items-center">
+        <ul class="hidden md:flex gap-6 text-sm uppercase items-center">
             <li>
                 <a
                     target="_blank"
@@ -65,6 +56,8 @@ const pages = {
                     >Login</Button
                 >
             </li>
+        </ul>
+        <ul class="hidden max-md:block items-center pr-6">
             <li>
                 <AppSidebar client:load />
             </li>

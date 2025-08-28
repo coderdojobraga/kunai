@@ -50,8 +50,8 @@ const items = [
 </script>
 
 <template>
-  <SidebarProvider>
-    <SidebarTrigger />
+  <SidebarProvider :defaultOpen="false">
+  <SidebarTrigger />
     <Sidebar side="right">
       <SidebarContent>
         <SidebarGroup>
