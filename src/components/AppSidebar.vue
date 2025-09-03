@@ -25,12 +25,12 @@ import {
 const items = [
   {
     title: "Página Inicial",
-    url: "#",
+    url: "/",
     icon: Home,
   },
   {
     title: "Currículo",
-    url: "",
+    url: "https://coderdojobraga.notion.site/",
     icon: Book,
   },
   {
@@ -40,7 +40,7 @@ const items = [
   },
   {
     title: "Equipa",
-    url: "",
+    url: "/team",
     icon: Users,
   },
   {
