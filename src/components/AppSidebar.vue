@@ -1,5 +1,16 @@
 <script setup lang="ts">
-import { Calendar, Home, Inbox, Search, Settings, HeartHandshake, ShieldQuestionMark, Book, Users, LogIn} from "lucide-vue-next"
+import SidebarProvider from "./ui/sidebar/SidebarProvider.vue";
+import SidebarTrigger from "./ui/sidebar/SidebarTrigger.vue";
+
+import {
+  Home,
+  HeartHandshake,
+  ShieldQuestionMark,
+  Book,
+  Users,
+  LogIn
+} from "lucide-vue-next"
+
 import {
   Sidebar,
   SidebarContent,
@@ -11,10 +22,6 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
-import SidebarProvider from "./ui/sidebar/SidebarProvider.vue";
-import SidebarTrigger from "./ui/sidebar/SidebarTrigger.vue";
-
-// Menu items.
 const items = [
   {
     title: "Página Inicial",
@@ -37,8 +44,8 @@ const items = [
     icon: Users,
   },
   {
-    title: "FAQS",
-    url: "/faq",
+    title: "FAQs",
+    url: "/faqs",
     icon: ShieldQuestionMark,
   },
   {
