@@ -1,0 +1,64 @@
+---
+import Image from "astro/components/Image.astro";
+import { Button } from "./ui/button";
+import logoLetteringDark from "../assets/logo-lettering-dark.svg";
+import AppSidebar from "./AppSidebar.vue";
+
+const pages = {
+    Events: "/events",
+    Recruitment: "/recruitment",
+    FAQs: "/faqs",
+};
+---
+
+<header class="container mx-auto">
+    <nav
+        class="mx-2 flex flex-row items-center justify-between pb-3 pt-7 lg:mx-12 xl:mx-20"
+    >
+        <div class="cursor-pointer py-2">
+            <Image
+                layout="fixed"
+                width={208}
+                height={65}
+                src={logoLetteringDark}
+                alt="CoderDojo Braga's Logo"
+            />
+        </div>
+
+        <ul class="hidden md:flex gap-6 text-sm uppercase items-center">
+            <li>
+                <a
+                    target="_blank"
+                    href="https://coderdojobraga.notion.site/"
+                    class="hover:text-purple-500 cursor-pointer hover:transition-discrete duration-100"
+                    >Currículo</a
+                >
+            </li>
+
+            {
+                Object.entries(pages).map(([name, route]) => (
+                    <li>
+                        <a
+                            href={route}
+                            class="hover:text-purple-500 cursor-pointer hover:transition-discrete duration-100"
+                        >
+                            {name}
+                        </a>
+                    </li>
+                ))
+            }
+
+            <li>
+                <Button
+                    class="bg-purple rounded-2xl cursor-pointer hover:bg-purple-500 hover:transition-discrete duration-200"
+                    >Login</Button
+                >
+            </li>
+        </ul>
+        <ul class="hidden max-md:block items-center pr-6">
+            <li>
+                <AppSidebar client:load />
+            </li>
+        </ul>
+    </nav>
+</header>
