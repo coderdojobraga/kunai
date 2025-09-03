@@ -23,8 +23,8 @@
     "dependencies": {
         "@astrojs/vue": "^5.1.0",
         "@tailwindcss/vite": "^4.1.11",
+        "astro": "^5.13.4",
         "@vueuse/core": "^13.6.0",
-        "astro": "^5.12.9",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
         "lucide-vue-next": "^0.539.0",
