@@ -5,7 +5,7 @@ import logoLetteringDark from "../assets/logo-lettering-dark.svg";
 import AppSidebar from "./AppSidebar.vue";
 
 const pages = {
-    Events: "/events",
+    Equipa: "/team",
     Recruitment: "/recruitment",
     FAQs: "/faqs",
 };
@@ -16,13 +16,16 @@ const pages = {
         class="mx-2 flex flex-row items-center justify-between pb-3 pt-7 lg:mx-12 xl:mx-20"
     >
         <div class="cursor-pointer py-2">
-            <Image
-                layout="fixed"
-                width={208}
-                height={65}
-                src={logoLetteringDark}
-                alt="CoderDojo Braga's Logo"
-            />
+            <a href="/">
+                <Image
+                    layout="fixed"
+                    width={208}
+                    height={65}
+                    src={logoLetteringDark}
+                    alt="CoderDojo Braga's Logo"
+                    loading={"eager"}
+                />
+            </a>
         </div>
 
         <ul class="hidden md:flex gap-6 text-sm uppercase items-center">
