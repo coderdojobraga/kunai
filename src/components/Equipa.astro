@@ -3,40 +3,19 @@ import team from "src/assets/team/team.json";
 import Membro from "./Membro.astro";
 ---
 
-<div class="container mx-auto">
-    <div class="mx-auto mt-14">
-        <h1 class="m-4 text-center text-4xl font-bold sm:text-5xl">Equipa</h1>
-        <div
-            class="container mx-auto h-8/12 w-6/12 bg-purple-700 py-0.5 text-center text-2xl lg:w-3/12"
-        >
-        </div>
-
-        <p
-            class="mx-2 mt-4 mb-4 text-center text-2xl leading-relaxed text-black lg:mx-12"
-        >
-            A equipa do CoderDojo Braga é composta por alunos voluntários de
-            vários cursos dedicados e apaixonados pelo projeto e por tecnologia.
-            Cada um traz o seu contributo único para criar uma experiencia
-            incrível para os Ninjas e todos envolvidos com o projeto. Mais do
-            que uma equipa, todos aqueles que se decidem envolver connosco
-            encontram uma família.
-        </p>
-    </div>
-
-    <div class="relative mb-20">
-        <div class="container mx-auto pt-20">
-            <div class="mx-2 -mt-12 flex flex-wrap lg:mx-12">
-                {
-                    team.map((entry, idx) => (
-                        <Membro
-                            name={entry.name}
-                            imagePath={`../assets/team/${entry.picture}`}
-                            role={entry.role}
-                            eager={idx < 5}
-                        />
-                    ))
-                }
-            </div>
+<div class="relative mb-20">
+    <div class="container mx-auto pt-20">
+        <div class="mx-2 -mt-12 flex flex-wrap lg:mx-12">
+            {
+                team.map((entry, idx) => (
+                    <Membro
+                        name={entry.name}
+                        imagePath={`../assets/team/${entry.picture}`}
+                        role={entry.role}
+                        eager={idx < 5}
+                    />
+                ))
+            }
         </div>
     </div>
 </div>
