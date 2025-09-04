@@ -1,23 +1,37 @@
 ---
+import Image from "astro/components/Image.astro";
+import type { ImageMetadata } from "astro";
+
 interface Props {
     name: string;
-    picture: string;
+    imagePath: string;
     role: string;
+    eager?: boolean;
 }
 
-const { name, picture, role } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "../assets/team/*.{jpg,png}",
+);
+
+const { name, imagePath, role, eager = false } = Astro.props;
+
+if (!images[imagePath])
+    throw new Error(
+        `"${imagePath}" does not exist in glob: "src/assets/team/*.{jpg,png}"`,
+    );
 ---
 
 <div
-    class="w-12/12 xl:w-2/10 mx-auto mb-12 mt-12 px-4 sm:w-6/12 md:w-4/12 lg:mb-0 lg:w-3/12 2xl:w-2/12"
+    class="w-12/12 xl:w-2/10 mb-12 mt-12 px-4 sm:w-6/12 md:w-14/12 lg:mb-0 lg:w-3/12 2xl:w-2/12"
 >
     <div class="flex justify-center">
-        <img
+        <Image
             alt={name}
-            src={`src/assets/team/${picture}`}
+            src={images[imagePath]()}
             width={300}
             height={300}
-            class="mx-auto h-56 w-56 rounded-full object-cover shadow-lg md:h-48 md:w-48"
+            class="h-56 w-56 rounded-full object-cover shadow-lg md:h-48 md:w-48"
+            loading={eager ? "eager" : "lazy"}
         />
     </div>
     <div class="p-4 text-center">
