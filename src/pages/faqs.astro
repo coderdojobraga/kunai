@@ -1,0 +1,25 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import FaqList from "../components/FaqList.vue";
+import faqs from "../data/faqs.json";
+---
+
+<MainLayout>
+    <main class="container mx-auto mt-12 px-4">
+        <h1 class="m-4 text-center text-4xl font-bold sm:text-5xl">
+            FAQ&apos;s
+        </h1>
+
+        <div class="bg-primary mx-auto h-1 w-24 rounded-full"></div>
+
+        <p
+            class="mx-2 mt-6 text-center text-lg leading-relaxed text-muted-foreground sm:mx-auto sm:w-8/12"
+        >
+            Aqui podes esclarecer as perguntas mais frequentes!
+        </p>
+
+        <section class="mt-12">
+            <FaqList client:load faqs={faqs} />
+        </section>
+    </main>
+</MainLayout>
