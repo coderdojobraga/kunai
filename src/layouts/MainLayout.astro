@@ -14,9 +14,11 @@ import Header from "../components/Header.astro";
         <meta name="generator" content={Astro.generator} />
         <title>CoderDojo Braga</title>
     </head>
-    <body>
+    <body class="flex min-h-screen flex-col">
         <Header />
-        <slot />
+        <main class="flex-1">
+            <slot />
+        </main>
         <Footer />
     </body>
 </html>
