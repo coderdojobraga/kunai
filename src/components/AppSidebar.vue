@@ -50,7 +50,7 @@ const items = [
   },
   {
     title: "Login",
-    url: "#",
+    url: "/",
     icon: LogIn
   }
 ];
