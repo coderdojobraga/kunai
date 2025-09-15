@@ -1,0 +1,21 @@
+---
+import teamData from "src/assets/team/team.json";
+import Member from "./Member.astro";
+---
+
+<div class="relative mb-20">
+    <div class="container mx-auto pt-20">
+        <div class="mx-2 -mt-12 flex flex-wrap lg:mx-12">
+            {
+                teamData.map((entry, idx) => (
+                    <Member
+                        name={entry.name}
+                        imagePath={`../assets/team/${entry.picture}`}
+                        role={entry.role}
+                        eager={idx < 5}
+                    />
+                ))
+            }
+        </div>
+    </div>
+</div>
