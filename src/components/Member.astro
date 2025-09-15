@@ -15,10 +15,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 const { name, imagePath, role, eager = false } = Astro.props;
 
-if (!images[imagePath])
-    throw new Error(
-        `"${imagePath}" does not exist in glob: "src/assets/team/*.{jpg,png}"`,
-    );
+const imageSrc: ImageMetadata = (
+    await (images[imagePath]?.() ?? import("../assets/team/ninja.jpg"))
+).default;
 ---
 
 <div
@@ -27,7 +26,7 @@ if (!images[imagePath])
     <div class="flex justify-center">
         <Image
             alt={name}
-            src={images[imagePath]()}
+            src={imageSrc}
             width={300}
             height={300}
             class="h-56 w-56 rounded-full object-cover shadow-lg md:h-48 md:w-48"
