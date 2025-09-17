@@ -1,0 +1,38 @@
+---
+import { Button } from "@/components/ui/button";
+---
+
+<section class="relative">
+    <div class="container mx-auto mt-14 flex flex-col items-center gap-12">
+        <div class="flex flex-1 flex-col items-center">
+            <h1 class="m-4 text-center text-4xl font-bold sm:text-5xl">
+                Bem-vindo à página do CoderDojo Braga!
+            </h1>
+            <h2 class="m-4 text-2xl font-normal sm:text-3xl">
+                Vais juntar-te a nós?
+            </h2>
+        </div>
+
+        <div class="-mt-4 flex flex-col gap-12 sm:flex-row">
+            <a
+                href="https://forms.gle/wLfmRqPDcoHr5XXs9"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <Button
+                    class="bg-purple m-auto block transform rounded-2xl px-4 py-2 text-white duration-300 hover:scale-110 hover:bg-purple"
+                >
+                    Quero ser Ninja
+                </Button>
+            </a>
+
+            <a href="/recruitment">
+                <Button
+                    class="bg-zinc-800 m-auto block transform rounded-2xl px-4 py-2 text-white duration-300 hover:scale-110 hover:bg-zinc-800"
+                >
+                    Quero ser Voluntário
+                </Button>
+            </a>
+        </div>
+    </div>
+</section>
