@@ -1,0 +1,17 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import FaqList from "../components/FaqList.vue";
+import Page from "@/components/Page.astro";
+import faqs from "../data/faqs.json";
+---
+
+<MainLayout>
+    <Page
+        title="FAQ's"
+        description={`Aqui podes esclarecer as perguntas mais frequentes!`}
+    >
+        <section class="mt-12 mb-24 px-4">
+            <FaqList client:visible faqs={faqs} />
+        </section>
+    </Page>
+</MainLayout>
