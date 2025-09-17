@@ -51,7 +51,7 @@
   background-color: #343434;
 }
 
-/* Ajuste para telas largas */
+/* Adjustment for wide screens */
 @media (min-width: 1230px) {
   .curveTop,
   .curveBottom {
