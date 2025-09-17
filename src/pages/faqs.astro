@@ -10,8 +10,8 @@ import faqs from "../data/faqs.json";
         title="FAQ's"
         description={`Aqui podes esclarecer as perguntas mais frequentes!`}
     >
-        <section class="mt-12">
-            <FaqList client:load faqs={faqs} />
+        <section class="mt-12 mb-24 px-4">
+            <FaqList client:visible faqs={faqs} />
         </section>
     </Page>
 </MainLayout>
