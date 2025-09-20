@@ -1,0 +1,23 @@
+---
+import Communication from "@/components/Communication.astro";
+import Developer from "@/components/Developer.astro";
+import Mentor from "@/components/Mentor.astro";
+import Page from "@/components/Page.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+---
+
+<MainLayout>
+    <Page
+        title="Junta-te ao CoderDojo Braga!"
+        description={`Contribui para o nosso projeto e faz parte de uma equipa
+        incrivelmente dedicada e apaixonada, na qual certamente vais aprender
+        bastante e fazer novas amizades. Quer queiras ser mentor e ensinar uma
+        criança a programar, quer queiras ser tu a programar e contribuir para
+        as nossas plataformas, ou quer queiras ajudar no nosso design e marketing,
+        acholher-te-emos de braços abertos.`}
+    >
+        <Mentor />
+        <Communication />
+        <Developer />
+    </Page>
+</MainLayout>
