@@ -1,0 +1,10 @@
+---
+import testimonialData from "src/assets/testimonials.json";
+import CarouselTestemonials from "src/components/CarouselTestimonials.vue";
+---
+
+<div class="relative mb-20">
+    <div class="container mx-auto pt-20">
+        <CarouselTestemonials client:idle items={testimonialData} />
+    </div>
+</div>
