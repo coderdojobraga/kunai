@@ -1,0 +1,56 @@
+---
+import "../styles/global.css";
+import { Button } from "@/components/ui/button";
+import Image from "astro/components/Image.astro";
+import logo from "../assets/logo.svg";
+
+const year = new Date().getFullYear();
+const currentUrl = Astro.url.href;
+---
+
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404 — Página não encontrada</title>
+    </head>
+    <body
+        class="min-h-screen flex flex-col items-center justify-center bg-white px-6 text-center"
+    >
+        <div class="mb-6">
+            <Image
+                layout="fixed"
+                width={90}
+                height={90}
+                src={logo}
+                alt="CoderDojo Braga's Logo"
+                loading={"eager"}
+            />
+        </div>
+
+        <h1 class="text-5xl font-bold tracking-tight text-slate-800">404</h1>
+        <p class="mt-3 text-lg text-slate-600">
+            Oops! A página que procuras não existe.
+        </p>
+        <p class="mt-1 text-sm text-slate-500">
+            O link pode estar desatualizado ou a página foi movida.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="/" class="no-underline">
+                <Button>Voltar à página inicial</Button>
+            </a>
+        </div>
+
+        <div class="mt-6 text-xs text-slate-400">
+            <span>URL:</span>
+            <code class="block break-all mt-1 bg-slate-100 px-2 py-1 rounded"
+                >{currentUrl}</code
+            >
+        </div>
+
+        <footer class="mt-10 text-xs text-slate-400">
+            © {year} - CoderDojo Braga
+        </footer>
+    </body>
+</html>
