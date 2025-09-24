@@ -1,67 +1,38 @@
 ---
-import Image from "astro/components/Image.astro";
-import halfLogo from "../assets/team/ninja.jpg";
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "./ui/card";
+import { Button } from "./ui/button";
 ---
 
-<section class="overflow-hidden">
-    <div class="container mx-auto mb-20">
-        <div class="flex flex-wrap justify-center">
-            <div class="mt-20 mr-auto ml-auto w-full px-12 md:w-5/12 md:px-4">
-                <h3
-                    class="mb-2 text-3xl leading-normal font-semibold text-white"
-                >
-                    Queres ajudar com Design e Marketing?
-                </h3>
-                <p
-                    class="mt-4 mb-4 text-lg leading-relaxed font-light text-white"
-                >
-                    O design e marketing são essenciais para o CoderDojo Braga,
-                    pois permitem expandir a nossa atuação, dando-nos a conhecer
-                    a mais pessoas, sejam novos guardiões e ninjas, ou mentores
-                    e voluntários.
-                </p>
-                <p
-                    class="mt-0 mb-4 text-lg leading-relaxed font-light text-white"
-                >
-                    Junta-te à nossa equipa, e contribui para tornar este
-                    projeto nalgo cada vez maior e melhor.
-                </p>
-                <a
-                    href="https://forms.gle/iEjGdnxfGYbk9rFy6"
-                    class="text-primary hover:text-primary mt-4 mr-1 mb-1 inline-block rounded-3xl bg-white px-6 py-4 text-sm font-bold uppercase shadow outline-none hover:bg-purple-100"
-                >
-                    Quero ajudar com Design e Marketing
-                </a>
-            </div>
-            <div class="relative mr-auto ml-auto w-6/12 pt-20 pl-80">
-                <Image
-                    alt="Half Logo"
-                    src={halfLogo}
-                    width={300}
-                    height={398}
-                />
-            </div>
-        </div>
-    </div>
-    <div class="mx-auto mt-12 mb-20">
-        <div class="relative z-10 flex flex-wrap justify-center px-12">
-            <div class="w-full lg:w-8/12">
-                <h2 class="text-7xl font-semibold text-white">&quot;</h2>
-                <p class="mt-4 mb-4 text-2xl leading-relaxed text-white">
-                    É realmente fantástico fazer parte de um projeto que tanto
-                    tem crescido nos últimos anos e poder ajudá-lo a chegar
-                    ainda mais longe. Integrar a equipa de Comunicação e
-                    Marketing do Dojo tem-me permitido ganhar experiência
-                    prática na minha área e aprender imenso com os restantes
-                    mentores e voluntários.
-                </p>
-                <h2 class="text-right text-7xl font-semibold text-white">
-                    &quot;
-                </h2>
-                <p class="mb-4 text-2xl leading-relaxed text-white italic">
-                    - Francisco Alves, Ciências da Comunicação
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+<Card>
+    <CardHeader>
+        <CardTitle>
+            <h3
+                class="pl-4 pr-4 mb-2 text-3xl leading-normal font-semibold text-black text-center"
+            >
+                Queres ajudar com Design e Marketing?
+            </h3>
+        </CardTitle>
+    </CardHeader>
+    <CardContent>
+        <p class="mt-4 mb-4 text-lg leading-relaxed font-light">
+            O design e marketing são essenciais para o CoderDojo Braga, pois
+            permitem expandir a nossa atuação, dando-nos a conhecer a mais
+            pessoas, sejam novos guardiões e ninjas, ou mentores e voluntários.
+        </p>
+        <p class="mt-0 mb-4 text-lg leading-relaxed font-light">
+            Junta-te à nossa equipa, e contribui para tornar este projeto nalgo
+            cada vez maior e melhor.
+        </p>
+    </CardContent>
+    <CardFooter>
+        <a href="https://forms.gle/iEjGdnxfGYbk9rFy6" target="_blank">
+            <Button>Quero ajudar com Design e Marketing</Button>
+        </a>
+    </CardFooter>
+</Card>

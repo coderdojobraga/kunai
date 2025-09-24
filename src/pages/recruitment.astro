@@ -1,4 +1,5 @@
 ---
+import Carousel from "@/components/Carousel.astro";
 import Communication from "@/components/Communication.astro";
 import Developer from "@/components/Developer.astro";
 import Mentor from "@/components/Mentor.astro";
@@ -16,8 +17,11 @@ import MainLayout from "@/layouts/MainLayout.astro";
         as nossas plataformas, ou quer queiras ajudar no nosso design e marketing,
         acholher-te-emos de braços abertos.`}
     >
-        <Mentor />
-        <Communication />
-        <Developer />
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8">
+            <Mentor />
+            <Developer />
+            <Communication />
+        </div>
+        <Carousel />
     </Page>
 </MainLayout>

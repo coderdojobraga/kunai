@@ -1,73 +1,41 @@
 ---
-import Image from "astro/components/Image.astro";
-import code from "../assets/mentor.jpg";
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "./ui/card";
+import { Button } from "./ui/button";
 ---
 
-<section class="overflow-hidden">
-    <div class="container mx-auto mb-20">
-        <div class="flex flex-wrap justify-center">
-            <div class="mt-20 mr-auto ml-auto w-full px-12 md:w-5/12 md:px-4">
-                <h3
-                    class="mb-2 text-3xl leading-normal font-semibold text-white"
-                >
-                    Contribui para as plataformas Open Source do CoderDojo Braga
-                </h3>
-                <p
-                    class="mt-4 mb-4 text-lg leading-relaxed font-light text-white"
-                >
-                    O código-fonte destas plataformas é público, o que significa
-                    que qualquer pessoa pode ver e contribuir para as mesmas.
-                </p>
-                <p
-                    class="mt-0 mb-4 text-lg leading-relaxed font-light text-white"
-                >
-                    Ao contribuires para as nossas plataformas, estás não só a
-                    ganhar experiência profissional, como também a melhorar a
-                    qualidade do trabalho que desenvolvemos.
-                </p>
-                <a
-                    href="https://github.com/coderdojobraga/shuriken"
-                    class="mt-4 mr-2 mb-1 inline-block rounded-3xl bg-purple-700 px-6 py-4 text-sm font-bold text-white uppercase shadow outline-none hover:bg-purple-600 hover:text-white"
-                >
-                    Shuriken
-                </a>
-                <a
-                    href="https://github.com/coderdojobraga/bokken"
-                    class="mt-4 mr-2 mb-1 inline-block rounded-3xl bg-purple-700 px-6 py-4 text-sm font-bold text-white uppercase shadow outline-none hover:bg-purple-600 hover:text-white"
-                >
-                    Bokken
-                </a>
-
-                <a
-                    href="https://forms.gle/iEjGdnxfGYbk9rFy6"
-                    class="mt-4 mr-1 mb-1 inline-block rounded px-6 py-4 text-sm font-bold text-white uppercase outline-none hover:text-purple-600"
-                >
-                    Quero contribuir
-                </a>
-            </div>
-            <div class="relative mr-auto ml-auto w-6/12 pt-20 pl-80">
-                <Image alt="Code" src={code} width={540} height={400} />
-            </div>
-        </div>
-    </div>
-    <div class="mx-auto mt-12 mb-20">
-        <div class="relative z-10 flex flex-wrap justify-center px-12">
-            <div class="w-full lg:w-8/12">
-                <h2 class="text-7xl font-semibold text-white">&quot;</h2>
-                <p class="mt-4 mb-4 text-2xl leading-relaxed text-white">
-                    Ser voluntário no CoderDojo Braga é uma experiência muito
-                    gratificante, pois permite-me apoiar e melhorar uma
-                    organização cujas atividades têm um efeito positivo profundo
-                    e duradouro nos ninjas, mentores e voluntários que nelas
-                    participam.
-                </p>
-                <h2 class="text-right text-7xl font-semibold text-white">
-                    &quot;
-                </h2>
-                <p class="mb-4 text-2xl leading-relaxed text-white italic">
-                    - Miguel Brandão, Engenharia Informática
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+<Card>
+    <CardHeader>
+        <CardTitle>
+            <h3
+                class="text-3xl leading-normal font-semibold text-black text-center"
+            >
+                Contribui para as plataformas Open Source
+            </h3>
+        </CardTitle>
+    </CardHeader>
+    <CardContent>
+        <p class="mt-4 mb-4 text-lg leading-relaxed font-light">
+            O código-fonte destas plataformas é público, o que significa que
+            qualquer pessoa pode ver e contribuir para as mesmas.
+        </p>
+        <p class="mt-0 mb-4 text-lg leading-relaxed font-light">
+            Ao contribuires para as nossas plataformas, estás não só a ganhar
+            experiência profissional, como também a melhorar a qualidade do
+            trabalho que desenvolvemos.
+        </p>
+    </CardContent>
+    <CardFooter class="space-x-2">
+        <a href="https://github.com/coderdojobraga/kunai" target="_blank">
+            <Button>Kunai</Button>
+        </a>
+        <a href="https://github.com/coderdojobraga/katana" target="_blank">
+            <Button>Katana</Button>
+        </a>
+    </CardFooter>
+</Card>

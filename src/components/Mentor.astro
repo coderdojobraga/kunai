@@ -1,78 +1,52 @@
 ---
-import Image from "astro/components/Image.astro";
-import mentor from "../assets/mentor.jpg";
 import { Button } from "./ui/button";
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "./ui/card";
+import { Image } from "astro:assets";
+import mentor from "src/assets/mentor.jpg";
 ---
 
-<section class="overflow-hidden">
-    <div class="container mx-auto">
-        <div class="flex flex-wrap justify-center">
-            <div class="mt-20 mr-auto ml-auto w-full px-12 md:w-5/12 md:px-4">
-                <h3
-                    class="mb-2 text-3xl leading-normal font-semibold text-black"
-                >
-                    Queres ser Mentor?
-                </h3>
-                <p
-                    class="mt-4 mb-4 text-lg leading-relaxed font-light text-black"
-                >
-                    Os Mentores são o coração do CoderDojo Braga. Sem eles, não
-                    há sessões e não há ninjas a aprender a programar.
-                </p>
-                <p
-                    class="mt-0 mb-4 text-lg leading-relaxed font-light text-black"
-                >
-                    Ao seres mentor, não só estás a ter um impacto positivo na
-                    vida dos ninjas, como estás a desenvolver as tuas <i
-                        >soft skills</i
-                    >, nomeadamente a forma como comunicas com os outros.
-                </p>
-                <a
-                    href="https://forms.gle/iEjGdnxfGYbk9rFy6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <Button
-                        class="mt-4 mr-1 mb-1 rounded-3xl bg-purple-700 px-6 py-4 text-sm font-bold text-white uppercase shadow outline-none hover:bg-purple-600 hover:cursor-pointer"
-                    >
-                        Quero ser Mentor
-                    </Button>
-                </a>
-            </div>
-            <div
-                class="mt-24 mr-auto ml-auto flex w-full items-center justify-center px-4 sm:w-3/4 md:w-6/12"
+<Card>
+    <CardHeader>
+        <CardTitle>
+            <h3
+                class="mb-2 text-3xl leading-normal font-semibold text-black text-center"
             >
-                <Image
-                    alt="Mentores do Dojo"
-                    src={mentor}
-                    width={1944}
-                    height={1296}
-                    class="rounded-2xl shadow-2xl"
-                    loading={"eager"}
-                />
-            </div>
+                Queres ser Mentor?
+            </h3>
+        </CardTitle>
+    </CardHeader>
+    <CardContent>
+        <p class="mt-4 mb-4 text-lg leading-relaxed font-light text-black">
+            Os Mentores são o coração do CoderDojo Braga. Sem eles, não há
+            sessões e não há ninjas a aprender a programar.
+        </p>
+        <div class="float-right pb-2 mr-auto ml-auto px-4 sm:w-3/4 md:w-6/12">
+            <Image
+                alt="Mentores do Dojo"
+                src={mentor}
+                class="rounded-2xl shadow-2xl"
+                loading={"eager"}
+            />
         </div>
-    </div>
-
-    <div class="mx-auto mt-12 mb-20">
-        <div class="relative z-10 flex flex-wrap justify-center px-12">
-            <div class="w-full lg:w-8/12">
-                <h2 class="text-7xl font-semibold text-purple-700">&quot;</h2>
-                <p class="mt-4 mb-4 text-2xl leading-relaxed text-black">
-                    Enquanto alguém que tem uma enorme paixão por tecnologia,
-                    ser mentor permite me ser o veículo de aprendizagem para
-                    jovens que partilham dessa paixão, algo que me realiza
-                    particularmente. Além disso, aprendi muito e continuo a
-                    aprender com aqueles que já cá estavam e me receberam de
-                    braços abertos.
-                </p>
-                <h2 class="text-right text-7xl font-semibold text-purple-700">
-                    &quot;
-                </h2>
-                <p class="mb-4 text-2xl leading-relaxed text-black italic">
-                    - Filipe Felício, Engenharia Informática
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+        <p class="mt-0 mb-4 text-lg leading-relaxed font-light text-black">
+            Ao seres mentor, não só estás a ter um impacto positivo na vida dos
+            ninjas, como estás a desenvolver as tuas <i>soft skills</i>,
+            nomeadamente a forma como comunicas com os outros.
+        </p>
+    </CardContent>
+    <CardFooter>
+        <a
+            href="https://forms.gle/iEjGdnxfGYbk9rFy6"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <Button> Quero ser Mentor </Button>
+        </a>
+    </CardFooter>
+</Card>
