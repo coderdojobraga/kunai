@@ -1,0 +1,41 @@
+---
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "./ui/card";
+import { Button } from "./ui/button";
+---
+
+<Card>
+    <CardHeader>
+        <CardTitle>
+            <h3
+                class="text-3xl leading-normal font-semibold text-black text-center"
+            >
+                Contribui para as plataformas Open Source
+            </h3>
+        </CardTitle>
+    </CardHeader>
+    <CardContent>
+        <p class="mt-4 mb-4 text-lg leading-relaxed font-light">
+            O código-fonte destas plataformas é público, o que significa que
+            qualquer pessoa pode ver e contribuir para as mesmas.
+        </p>
+        <p class="mt-0 mb-4 text-lg leading-relaxed font-light">
+            Ao contribuires para as nossas plataformas, estás não só a ganhar
+            experiência profissional, como também a melhorar a qualidade do
+            trabalho que desenvolvemos.
+        </p>
+    </CardContent>
+    <CardFooter class="space-x-2">
+        <a href="https://github.com/coderdojobraga/kunai" target="_blank">
+            <Button>Kunai</Button>
+        </a>
+        <a href="https://github.com/coderdojobraga/katana" target="_blank">
+            <Button>Katana</Button>
+        </a>
+    </CardFooter>
+</Card>
