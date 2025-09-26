@@ -1,5 +1,5 @@
 ---
-import Carousel from "@/components/Carousel.astro";
+import CarouselTestimonials from "@/components/CarouselTestimonials.vue";
 import Communication from "@/components/Communication.astro";
 import Developer from "@/components/Developer.astro";
 import Mentor from "@/components/Mentor.astro";
@@ -17,11 +17,12 @@ import MainLayout from "@/layouts/MainLayout.astro";
         as nossas plataformas, ou quer queiras ajudar no nosso design e marketing,
         acholher-te-emos de braços abertos.`}
     >
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8">
+        <div class="flex flex-col w-2/4 gap-6 p-8 mx-auto max-sm:w-4/5 pb-18">
             <Mentor />
             <Developer />
             <Communication />
         </div>
-        <Carousel />
+
+        <CarouselTestimonials client:idle class="pb-18 max-sm:pb-16" />
     </Page>
 </MainLayout>

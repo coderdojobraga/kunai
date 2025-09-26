@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import Autoplay from "embla-carousel-autoplay"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
-import testimonialData from "@/assets/testimonials.json"
+import testimonialData from "src/data/testimonials.json"
 import Testimonial from "./Testimonial.vue"
 
 const plugin = Autoplay({
-  delay: 2000,
+  delay: 9000,
   stopOnMouseEnter: true,
   stopOnInteraction: false,
 })
