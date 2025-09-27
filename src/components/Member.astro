@@ -3,42 +3,42 @@ import Image from "astro/components/Image.astro";
 import type { ImageMetadata } from "astro";
 
 interface Props {
-    name: string;
-    imagePath: string;
-    role: string;
-    eager?: boolean;
+  name: string;
+  imagePath: string;
+  role: string;
+  eager?: boolean;
 }
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-    "../assets/team/*.{jpg,png}",
+  "../assets/team/*.{jpg,png}",
 );
 
 const { name, imagePath, role, eager = false } = Astro.props;
 
 const imageSrc: ImageMetadata = (
-    await (images[imagePath]?.() ?? import("../assets/team/ninja.jpg"))
+  await (images[imagePath]?.() ?? import("../assets/team/ninja.jpg"))
 ).default;
 ---
 
 <div
-    class="mx-auto w-12/12 xl:w-2/10 mb-12 mt-12 px-4 sm:w-6/12 md:w-14/12 lg:mb-0 lg:w-3/12 2xl:w-2/12"
+  class="mx-auto w-12/12 xl:w-2/10 mb-12 mt-12 px-4 sm:w-6/12 md:w-14/12 lg:mb-0 lg:w-3/12 2xl:w-2/12"
 >
-    <div class="flex justify-center">
-        <Image
-            alt={name}
-            src={imageSrc}
-            width={300}
-            height={300}
-            class="h-56 w-56 rounded-full object-cover shadow-lg md:h-48 md:w-48"
-            loading={eager ? "eager" : "lazy"}
-        />
-    </div>
-    <div class="p-4 text-center">
-        <p class="text-3xl font-bold md:text-2xl lg:text-xl">{name}</p>
-        <p
-            class="md:text-md mt-1 text-lg font-semibold uppercase text-purple-600 lg:text-sm"
-        >
-            {role}
-        </p>
-    </div>
+  <div class="flex justify-center">
+    <Image
+      alt={name}
+      src={imageSrc}
+      width={300}
+      height={300}
+      class="h-56 w-56 rounded-full object-cover shadow-lg md:h-48 md:w-48"
+      loading={eager ? "eager" : "lazy"}
+    />
+  </div>
+  <div class="p-4 text-center">
+    <p class="text-3xl font-bold md:text-2xl lg:text-xl">{name}</p>
+    <p
+      class="md:text-md mt-1 text-lg font-semibold uppercase text-purple-600 lg:text-sm"
+    >
+      {role}
+    </p>
+  </div>
 </div>
