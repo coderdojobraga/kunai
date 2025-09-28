@@ -1,25 +1,25 @@
 ---
 interface Props {
-    title: string;
-    description: string;
+  title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props;
 ---
 
 <div class="container mx-auto">
-    <div class="mx-auto mt-14">
-        <h1 class="m-4 text-center text-4xl font-bold sm:text-5xl">{title}</h1>
-        <div
-            class="container mx-auto h-8/12 w-6/12 bg-purple-700 py-0.5 text-center text-2xl lg:w-3/12"
-        >
-        </div>
-
-        <p
-            class="mx-2 mt-4 mb-4 text-center text-2xl leading-relaxed text-black lg:mx-12 max-sm:text-xl"
-        >
-            {description}
-        </p>
+  <div class="mx-auto mt-14">
+    <h1 class="m-4 text-center text-4xl font-bold sm:text-5xl">{title}</h1>
+    <div
+      class="container mx-auto h-8/12 w-6/12 bg-purple-700 py-0.5 text-center text-2xl lg:w-3/12"
+    >
     </div>
-    <slot />
+
+    <p
+      class="mx-2 mt-4 mb-4 text-center text-2xl leading-relaxed text-black lg:mx-12 max-sm:text-xl"
+    >
+      {description}
+    </p>
+  </div>
+  <slot />
 </div>

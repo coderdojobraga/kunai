@@ -1,17 +1,15 @@
 # build output
 dist/
-# generated types
-.astro/
 
 # dependencies
 node_modules/
+.astro/
 
 # logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
 
 # environment variables
 .env
@@ -22,3 +20,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# custom
+.vscode/

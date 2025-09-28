@@ -4,18 +4,18 @@ const { url, svgPath } = Astro.props;
 ---
 
 <a
-    href={`https://www.${url}.com/${id}`}
-    target="_blank"
-    class="hover:text-purple cursor-pointer transition-discrete duration-300"
-    aria-label={`Follow us on ${url}`}
+  href={`https://www.${url}.com/${id}`}
+  target="_blank"
+  class="hover:text-purple cursor-pointer transition-discrete duration-300"
+  aria-label={`Follow us on ${url}`}
 >
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={24}
-        height={24}
-        fill="currentColor"
-        viewBox="0 0 24 24"
-    >
-        <path d={svgPath}> </path>
-    </svg>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path d={svgPath}> </path>
+  </svg>
 </a>

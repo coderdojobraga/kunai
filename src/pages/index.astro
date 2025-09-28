@@ -7,81 +7,73 @@ import logo from "../assets/logo-draw-white.svg";
 ---
 
 <MainLayout>
-    <div class="overflow-hidden">
-        <Hero />
-        <div class="container mx-auto">
-            <section class="relative mx-2 md:mt-28 lg:mx-12 xl:mx-20">
-                <div
-                    class="container my-8 flex w-11/12 flex-col items-start py-2 sm:w-10/12 lg:w-4/6"
-                >
-                    <h2 class="py-2 text-2xl font-semibold sm:text-3xl">
-                        <span class="mr-1 text-2xl text-purple-500 sm:text-3xl"
-                            >|</span
-                        >
-                        O que é o CoderDojo Braga?
-                    </h2>
-                    <p class="mt-2 text-lg sm:text-xl">
-                        O CoderDojo Braga integra-se num movimento global,
-                        voluntário, sem fins lucrativos e que visa ensinar
-                        crianças e jovens dos 7 aos 17 anos a programar. O
-                        projeto pretende mostrar como a programação pode ser uma
-                        força de mudança positiva no mundo.
-                    </p>
-                </div>
-            </section>
+  <div class="overflow-hidden">
+    <Hero />
+    <div class="container mx-auto">
+      <section class="relative mx-2 md:mt-28 lg:mx-12 xl:mx-20">
+        <div
+          class="container my-8 flex w-11/12 flex-col items-start py-2 sm:w-10/12 lg:w-4/6"
+        >
+          <h2 class="py-2 text-2xl font-semibold sm:text-3xl">
+            <span class="mr-1 text-2xl text-purple-500 sm:text-3xl">|</span>
+            O que é o CoderDojo Braga?
+          </h2>
+          <p class="mt-2 text-lg sm:text-xl">
+            O CoderDojo Braga integra-se num movimento global, voluntário, sem
+            fins lucrativos e que visa ensinar crianças e jovens dos 7 aos 17
+            anos a programar. O projeto pretende mostrar como a programação pode
+            ser uma força de mudança positiva no mundo.
+          </p>
         </div>
-
-        <Curves />
-
-        <div class="container mx-auto">
-            <section
-                class="relative mx-2 flex justify-end text-white lg:mx-12 xl:mx-20"
-            >
-                <div
-                    class="container my-8 flex w-11/12 flex-col items-end py-2 sm:w-10/12 lg:w-4/6"
-                >
-                    <h2
-                        class="gap-1 py-2 text-2xl font-semibold text-white sm:text-3xl"
-                    >
-                        Como funciona o Dojo?
-                        <span class="ml-1 text-2xl text-purple-500 sm:text-3xl"
-                            >|</span
-                        >
-                    </h2>
-                    <p class="mt-2 text-right text-lg sm:text-xl">
-                        As sessões decorrem uma vez por mês no Departamento de
-                        Informática da Universidade do Minho, em Braga. São
-                        propostos diversos desafios aos Ninjas, consoante o
-                        nível em que se encontram, e que os mesmos tentam
-                        completar com a ajuda dos Mentores.
-                    </p>
-                </div>
-            </section>
-        </div>
-
-        <div class="container mx-auto">
-            <section
-                class="relative mx-2 mb-8 mt-1 text-white md:mt-28 lg:mx-12 xl:mx-20"
-            >
-                <div class="container mx-auto text-center">
-                    <hr
-                        class="mx-auto w-6/12 border-purple-500 py-2 text-center lg:w-3/12"
-                    />
-                    <div class="m-4 mx-auto w-9/12 text-2xl md:w-8/12">
-                        O CoderDojo Braga pretende dar a todas as crianças e
-                        jovens da região minhota a oportunidade de aprenderem a
-                        programar num ambiente amigável e divertido.
-                    </div>
-                    <div class="mt-12 flex justify-center">
-                        <Image
-                            src={logo}
-                            alt="CoderDojo Braga's Logo"
-                            width={80}
-                            height={80}
-                        />
-                    </div>
-                </div>
-            </section>
-        </div>
+      </section>
     </div>
+
+    <Curves />
+
+    <div class="container mx-auto">
+      <section
+        class="relative mx-2 flex justify-end text-white lg:mx-12 xl:mx-20"
+      >
+        <div
+          class="container my-8 flex w-11/12 flex-col items-end py-2 sm:w-10/12 lg:w-4/6"
+        >
+          <h2 class="gap-1 py-2 text-2xl font-semibold text-white sm:text-3xl">
+            Como funciona o Dojo?
+            <span class="ml-1 text-2xl text-purple-500 sm:text-3xl">|</span>
+          </h2>
+          <p class="mt-2 text-right text-lg sm:text-xl">
+            As sessões decorrem uma vez por mês no Departamento de Informática
+            da Universidade do Minho, em Braga. São propostos diversos desafios
+            aos Ninjas, consoante o nível em que se encontram, e que os mesmos
+            tentam completar com a ajuda dos Mentores.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <div class="container mx-auto">
+      <section
+        class="relative mx-2 mb-8 mt-1 text-white md:mt-28 lg:mx-12 xl:mx-20"
+      >
+        <div class="container mx-auto text-center">
+          <hr
+            class="mx-auto w-6/12 border-purple-500 py-2 text-center lg:w-3/12"
+          />
+          <div class="m-4 mx-auto w-9/12 text-2xl md:w-8/12">
+            O CoderDojo Braga pretende dar a todas as crianças e jovens da
+            região minhota a oportunidade de aprenderem a programar num ambiente
+            amigável e divertido.
+          </div>
+          <div class="mt-12 flex justify-center">
+            <Image
+              src={logo}
+              alt="CoderDojo Braga's Logo"
+              width={80}
+              height={80}
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
 </MainLayout>
