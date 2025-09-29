@@ -1,14 +1,28 @@
 ---
-import Social from "./Social.astro";
-
 interface Props {
     title: string;
+    svgPath: string;
 }
 
-const { title } = Astro.props;
+const { title, svgPath } = Astro.props as Props;
 ---
 
-<li class="flex gap-x-10">
-    <Social />
+<li class="relative mb-10 ms-6">
+    <span
+        class="absolute -start-15 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-primary-foreground ring-8 ring-background bg-purple"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"><path d={svgPath}></path></svg
+        >
+    </span>
+    <h2 class="mb-2 text-3xl font-semibold text-foreground">{title}</h2>
     <slot />
 </li>

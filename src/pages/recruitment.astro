@@ -4,6 +4,9 @@ import Timeline from "@/components/Timeline.astro";
 import Page from "@/components/Page.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 import TimelineItem from "@/components/TimelineItem.astro";
+import Developer from "@/components/Developer.astro";
+import Mentor from "@/components/Mentor.astro";
+import Communication from "@/components/Communication.astro";
 ---
 
 <MainLayout>
@@ -17,10 +20,26 @@ import TimelineItem from "@/components/TimelineItem.astro";
         acholher-te-emos de braços abertos.`}
     >
         <Timeline>
-            <TimelineItem title="Mentor">Mentor</TimelineItem>
-            <TimelineItem title="Dev">Developer</TimelineItem>
-            <TimelineItem title="Com">Communication</TimelineItem>
+            <TimelineItem
+                title="Queres ser Mentor?"
+                svgPath="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2 M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M19 8v6 M22 11h-6"
+            >
+                <Mentor />
+            </TimelineItem>
+            <TimelineItem
+                title="Plataforma Open Source"
+                svgPath="M5 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6 M5 9v12 m10-12-3-3 3-3 M12 6h5a2 2 0 0 1 2 2v3 M19 15v6 M22 18h-6"
+            >
+                <Developer />
+            </TimelineItem>
+            <TimelineItem
+                title="Design e Marketing"
+                svgPath="M3 11l18-5v12L3 13v-2z M11 12l-3 9 M15 12l3 9"
+            >
+                <Communication />
+            </TimelineItem>
         </Timeline>
+
         <CarouselTestimonials client:idle class="pb-18 max-sm:pb-16" />
     </Page>
 </MainLayout>
