@@ -19,7 +19,7 @@
   z-index: -4;
   width: 100vw;
   height: 100vh;
-  background-color: #343434;
+  background-color: hsl(0, 0%, 20%);
   transform: translate(0, -100%);
 }
 
@@ -29,7 +29,7 @@
   z-index: -4;
   width: 100vw;
   height: 100vh;
-  background-color: #343434;
+  background-color: hsl(0, 0%, 20%);
 }
 
 .curveTop {
@@ -48,7 +48,7 @@
   width: 100vw;
   height: 9999px;
   border-radius: 9999px;
-  background-color: #343434;
+  background-color: hsl(0, 0%, 20%);
 }
 
 /* Adjustment for wide screens */
