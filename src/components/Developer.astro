@@ -7,6 +7,8 @@ import {
     CardTitle,
 } from "./ui/card";
 import { Button } from "./ui/button";
+import { Image } from "astro:assets";
+import openSource from "src/assets/open-source.jpg";
 ---
 
 <Card>
@@ -15,6 +17,14 @@ import { Button } from "./ui/button";
             O código-fonte destas plataformas é público, o que significa que
             qualquer pessoa pode ver e contribuir para as mesmas.
         </p>
+        <div class="float-right pb-2 mr-auto ml-4 px-4 sm:w-3/4 md:w-6/12">
+            <Image
+                alt="Plataforma Open Source"
+                src={openSource}
+                class="rounded-2xl shadow-2xl"
+                loading={"eager"}
+            />
+        </div>
         <p class="mt-0 mb-4 text-lg leading-relaxed font-light">
             Ao contribuires para as nossas plataformas, estás não só a ganhar
             experiência profissional, como também a melhorar a qualidade do

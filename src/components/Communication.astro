@@ -7,6 +7,8 @@ import {
     CardTitle,
 } from "./ui/card";
 import { Button } from "./ui/button";
+import { Image } from "astro:assets";
+import marketing from "src/assets/marketing.png";
 ---
 
 <Card>
@@ -16,14 +18,31 @@ import { Button } from "./ui/button";
             permitem expandir a nossa atuação, dando-nos a conhecer a mais
             pessoas, sejam novos guardiões e ninjas, ou mentores e voluntários.
         </p>
+        <div class="float-right pb-2 mr-auto ml-4 px-4 sm:w-3/4 md:w-6/12">
+            <Image
+                alt="Design e Marketing"
+                src={marketing}
+                class="rounded-2xl shadow-2xl"
+                loading={"eager"}
+            />
+        </div>
         <p class="mt-0 mb-4 text-lg leading-relaxed font-light">
             Junta-te à nossa equipa, e contribui para tornar este projeto nalgo
             cada vez maior e melhor.
         </p>
     </CardContent>
-    <CardFooter>
-        <a href="https://forms.gle/iEjGdnxfGYbk9rFy6" target="_blank">
-            <Button>Quero ajudar com Design e Marketing</Button>
+    <CardFooter class="w-full clear-both">
+        <a
+            href="https://forms.gle/iEjGdnxfGYbk9rFy6"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-full sm:inline-block sm:w-auto"
+        >
+            <Button
+                class="w-full sm:w-auto whitespace-normal break-words text-center max-sm:py-6"
+            >
+                Quero ajudar com Design e Marketing
+            </Button>
         </a>
     </CardFooter>
 </Card>
