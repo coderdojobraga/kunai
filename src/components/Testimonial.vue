@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <div>
-    <div class="justify-center px-12">
+    <div class="justify-center px-8">
       <div>
         <h2 class="text-7xl font-semibold text-primary max-sm:text-3xl">&quot;</h2>
         <p class="mt-4 mb-4 text-2xl max-sm:text-base leading-relaxed">{{ testimonial }}</p>
