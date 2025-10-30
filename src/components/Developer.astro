@@ -11,10 +11,12 @@ import { Image } from "astro:assets";
 import openSource from "src/assets/open-source.jpg";
 ---
 
-<Card>
-  <CardContent>
-    <div class="flex max-sm:flex-col-reverse">
-      <div class="flex flex-col w-1/2 max-sm:w-full justify-center">
+<Card
+  class="w-full min-h-[20rem] sm:min-h-[22rem] md:min-h-[26rem] lg:min-h-[30rem]"
+>
+  <CardContent class="flex-1 p-0">
+    <div class="flex flex-col sm:flex-row h-full">
+      <div class="flex flex-col w-full sm:w-1/2 justify-center p-6">
         <p class="mt-4 mb-4 text-lg leading-relaxed font-light">
           O código-fonte destas plataformas é público, o que significa que
           qualquer pessoa pode ver e contribuir para as mesmas.
@@ -25,11 +27,11 @@ import openSource from "src/assets/open-source.jpg";
           trabalho que desenvolvemos.
         </p>
       </div>
-      <div class="pt-4 ml-4 sm:w-3/4 md:w-6/12 max-sm:pt-4 max-sm:pb-8">
+      <div class="w-full sm:w-1/2 flex items-center justify-center p-6">
         <Image
           alt="Plataforma Open Source"
           src={openSource}
-          class="rounded-2xl shadow-2xl"
+          class="rounded-2xl shadow-2xl w-full h-56 sm:h-full object-cover"
           loading={"eager"}
         />
       </div>
