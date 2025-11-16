@@ -2,6 +2,7 @@
 import Autoplay from "embla-carousel-autoplay"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import type { CarouselApi } from "@/components/ui/carousel"
+import { GitPullRequestCreateArrow, UserPlus, Highlighter } from "lucide-vue-next"
 
 const plugin = Autoplay({
   delay: 9000,
@@ -13,6 +14,11 @@ import { ref } from "vue"
 
 const emblaApi = ref<CarouselApi | null>(null)
 const currentIndex = ref(0)
+const icons = [
+  { title: "Mentor", comp: UserPlus },
+  { title: "Developer", comp: GitPullRequestCreateArrow },
+  { title: "Design & Marketing", comp: Highlighter },
+]
 
 function onInitApi(api: CarouselApi) {
   emblaApi.value = api
@@ -63,19 +69,16 @@ function onTimelineClick(idx: number) {
 
         <div class="relative z-10 flex w-full justify-between items-center">
           <button
-            v-for="i in 3"
-            :key="i"
-            @click="onTimelineClick(i - 1)"
-            :aria-pressed="currentIndex === i - 1"
-            class="flex items-center justify-center w-12 h-12 rounded-full transition-transform"
-            :class="currentIndex === i - 1 ? 'bg-primary text-white scale-110 shadow-lg' : 'bg-white text-slate-700 border border-slate-200'"
-            :aria-label="`Go to item ${i}`"
+            v-for="(icon, idx) in icons"
+            :key="idx"
+            @click="onTimelineClick(idx)"
+            :aria-pressed="currentIndex === idx"
+            class="flex items-center justify-center w-14 h-14 rounded-full transition-transform"
+            :class="currentIndex === idx ? 'bg-primary text-white scale-110 shadow-lg' : 'bg-white text-slate-700 border border-slate-200'"
+            :aria-label="`Go to ${icon.title}`"
+            :title="icon.title"
           >
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <circle cx="12" cy="12" r="9" class="stroke-current" :class="currentIndex === i - 1 ? 'opacity-0' : 'opacity-100'" />
-              <circle cx="12" cy="12" r="4" :class="currentIndex === i - 1 ? 'fill-white' : 'fill-slate-400'" />
-            </svg>
+            <component :is="icon.comp" class="w-6 h-6" aria-hidden="true" />
           </button>
         </div>
       </div>
@@ -99,7 +102,7 @@ function onTimelineClick(idx: number) {
         </CarouselItem>
 
         <CarouselItem>
-          <slot name="social" />
+          <slot name="communication" />
         </CarouselItem>
       </CarouselContent>
 
