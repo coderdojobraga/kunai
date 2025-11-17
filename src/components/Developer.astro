@@ -1,0 +1,48 @@
+---
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { Button } from "./ui/button";
+import { Image } from "astro:assets";
+import openSource from "src/assets/open-source.jpg";
+---
+
+<Card
+  class="w-full min-h-[20rem] sm:min-h-[22rem] md:min-h-[26rem] lg:min-h-[30rem]"
+>
+  <CardContent class="flex-1 p-0">
+    <div class="flex flex-col sm:flex-row h-full">
+      <div class="flex flex-col w-full sm:w-1/2 justify-center p-6">
+        <p class="mt-4 mb-4 text-lg leading-relaxed font-light">
+          O código-fonte destas plataformas é público, o que significa que
+          qualquer pessoa pode ver e contribuir para as mesmas.
+        </p>
+        <p class="mt-0 mb-4 text-lg leading-relaxed font-light">
+          Ao contribuires para as nossas plataformas, estás não só a ganhar
+          experiência profissional, como também a melhorar a qualidade do
+          trabalho que desenvolvemos.
+        </p>
+      </div>
+      <div class="w-full sm:w-1/2 flex items-center justify-center p-6">
+        <Image
+          alt="Plataforma Open Source"
+          src={openSource}
+          class="rounded-2xl shadow-2xl w-full h-56 sm:h-full object-cover"
+          loading={"eager"}
+        />
+      </div>
+    </div>
+  </CardContent>
+  <CardFooter class="space-x-2">
+    <a href="https://github.com/coderdojobraga/kunai" target="_blank">
+      <Button>Kunai</Button>
+    </a>
+    <a href="https://github.com/coderdojobraga/katana" target="_blank">
+      <Button>Katana</Button>
+    </a>
+  </CardFooter>
+</Card>

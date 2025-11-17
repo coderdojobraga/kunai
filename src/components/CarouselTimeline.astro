@@ -1,0 +1,20 @@
+---
+import CarouselTimelineVue from "./CarouselTimeline.vue";
+import Mentor from "./Mentor.astro";
+import Communication from "./Communication.astro";
+import Developer from "./Developer.astro";
+---
+
+<div class="md:hidden p-5 pb-14">
+  <CarouselTimelineVue client:idle>
+    <div slot="mentor">
+      <Mentor />
+    </div>
+    <div slot="developer">
+      <Developer />
+    </div>
+    <div slot="communication" class="pl-3">
+      <Communication />
+    </div>
+  </CarouselTimelineVue>
+</div>
